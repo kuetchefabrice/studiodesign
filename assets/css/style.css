@@ -1,0 +1,372 @@
+/* ==========================================================================
+   STUDIO DESIGN - GLOBAL STYLESHEET
+   Ebénisterie d'Art, Mobilier Sur-Mesure & Modélisation CNC
+   ========================================================================== */
+
+:root {
+    --primary-color: #2c221e;
+    --accent-color: #c59b27;
+    --accent-hover: #b08720;
+    --bg-color: #faf8f5;
+    --text-color: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+    --border-color: #e2ddd9;
+    --transition: all 0.3s ease;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Containers & Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Header & Navigation */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent-color);
+}
+
+/* Hero Sections */
+.hero-section, .portfolio-hero, .boutique-hero {
+    background: linear-gradient(rgba(44,34,30,0.85), rgba(44,34,30,0.85)), url('../images/hero-bg.jpg') center/cover no-repeat;
+    color: var(--white);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero-title, .page-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: #dddddd;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-primary-dark, .btn-sm {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-sm {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-sm:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Grids & Cards */
+.section-recent-designs, .catalog-section, .section-portfolio-grid, .projects-section, .devis-section, .checkout-section {
+    padding: 60px 0;
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.section-header h2, .section-header h1 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-light);
+}
+
+.products-grid, .portfolio-grid, .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.product-card, .portfolio-card, .blog-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.product-card:hover, .portfolio-card:hover, .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.product-card img, .portfolio-img, .blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-info, .blog-content, .portfolio-overlay {
+    padding: 20px;
+}
+
+.product-info h3, .portfolio-title, .blog-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-light);
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Portfolio Overlay Style */
+.portfolio-image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(44,34,30,0.9));
+    color: var(--white);
+    padding: 30px 20px 20px 20px;
+}
+
+.portfolio-overlay .portfolio-category {
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.portfolio-overlay .portfolio-title {
+    color: var(--white);
+    margin: 5px 0 15px 0;
+}
+
+.btn-portfolio-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-portfolio-link:hover {
+    text-decoration: underline;
+}
+
+/* Forms (Devis & Checkout) */
+.devis-form, .checkout-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #fdfbf7;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+/* Checkout Grid */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cart-summary, .checkout-form-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-table th {
+    background-color: #f5f2ec;
+    color: var(--primary-color);
+}
+
+.total-box {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid var(--primary-color);
+    font-size: 1.2rem;
+    text-align: right;
+    color: var(--primary-color);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 30px 0;
+    margin-top: 60px;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .main-nav ul {
+        gap: 15px;
+    }
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-buttons {
+        flex-direction: column;
+    }
+}
