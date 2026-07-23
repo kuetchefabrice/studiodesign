@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commander & Validation | Studio Design</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Studio Design</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="boutique.html" class="active">Boutique</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="devis.html">Devis Sur-Mesure</a></li>
+                    <li><a href="blog.html">Blog & Atelier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="checkout-section">
+        <div class="container">
+            <h1 class="text-center">Récapitulatif de votre commande</h1>
+            <div class="checkout-grid">
+                <div class="cart-summary">
+                    <h3>Articles sélectionné(s)</h3>
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Produit</th>
+                                <th>Quantité</th>
+                                <th>Prix</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bureau de Direction Executive (Modèle 3D + Fichiers)</td>
+                                <td>1</td>
+                                <td>350 000 FCFA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="total-box">
+                        <strong>Total Général : 350 000 FCFA</strong>
+                    </div>
+                </div>
+                <div class="checkout-form-container">
+                    <h3>Informations de Facturation & Livraison</h3>
+                    <form action="#" method="POST" class="checkout-form">
+                        <div class="form-group">
+                            <label for="nom_client">Nom et Prénom</label>
+                            <input type="text" id="nom_client" name="nom_client" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email_client">Email</label>
+                            <input type="email" id="email_client" name="email_client" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adresse_client">Adresse de livraison ou de téléchargement</label>
+                            <textarea id="adresse_client" name="adresse_client" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width">Confirmer la commande</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Studio Design & Ébénisterie. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

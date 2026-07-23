@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Devis Sur-Mesure | Studio Design</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Studio Design</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="devis.html" class="active">Devis Sur-Mesure</a></li>
+                    <li><a href="blog.html">Blog & Atelier</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="devis-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <h1>Configuration & Devis de votre Projet</h1>
+                <p>Précisez vos besoins en essences de bois (Wengé, Bilinga, etc.), dimensions et type de meuble.</p>
+            </div>
+
+            <form action="#" method="POST" class="devis-form">
+                <div class="form-group">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse Email</label>
+                    <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="+237 ...">
+                </div>
+                <div class="form-group">
+                    <label for="type_projet">Type de Projet</label>
+                    <select id="type_projet" name="type_projet">
+                        <option value="cuisine">Cuisine Équipée</option>
+                        <option value="dressing">Dressing / Placard</option>
+                        <option value="bureau">Bureau / Mobilier de Direction</option>
+                        <option value="autre">Autre agencement bois</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="essence_bois">Essence de Bois souhaitée</label>
+                    <select id="essence_bois" name="essence_bois">
+                        <option value="wenge">Wengé</option>
+                        <option value="bilinga">Bilinga</option>
+                        <option value="autre">Autre / Panneaux stratifiés</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dimensions">Dimensions approximatives & Spécifications</label>
+                    <textarea id="dimensions" name="dimensions" rows="4" placeholder="Ex: Longueur 2400 mm, hauteur 2100 mm..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Envoyer la demande de devis</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Studio Design & Ébénisterie. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
